@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import { personalInfo, socialLinks } from '~/lib/data/portfolio';
 
 const iconMap: Record<string, JSX.Element> = {
@@ -71,7 +72,7 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            href="mailto:aaron@example.com"
+            href="mailto:aaron@codestuff.dev"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-brand/50 hover:text-brand-light transition-colors text-text-secondary font-medium"
           >
             Get in touch

@@ -51,7 +51,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="mailto:aaron@example.com"
+          href="mailto:aaron@codestuff.dev"
           className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark transition-colors text-white text-sm font-medium"
         >
           Hire me
@@ -91,7 +91,7 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="mailto:aaron@example.com"
+                href="mailto:aaron@codestuff.dev"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark transition-colors text-white text-sm font-medium"
               >
                 Hire me

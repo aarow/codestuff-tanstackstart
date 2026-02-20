@@ -14,7 +14,7 @@ social:
     href: https://twitter.com
     icon: twitter
   - label: Email
-    href: mailto:aaron@example.com
+    href: mailto:aaron@codestuff.dev
     icon: email
 ---
 
