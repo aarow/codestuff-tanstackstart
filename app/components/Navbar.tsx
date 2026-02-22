@@ -44,6 +44,7 @@ export default function Navbar() {
               {link.href.startsWith('/') ? (
                 <Link
                   to={link.href}
+                  viewTransition={{ types: ['slide-right'] }}
                   className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
                 >
                   {link.label}
@@ -63,6 +64,7 @@ export default function Navbar() {
         {/* CTA */}
         <Link
           to="/contact"
+          viewTransition={{ types: ['slide-right'] }}
           className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark transition-colors text-white text-sm font-medium"
         >
           Hire me
@@ -114,6 +116,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark transition-colors text-white text-sm font-medium"
+                viewTransition={{ types: ['slide-right'] }}
               >
                 Hire me
               </Link>

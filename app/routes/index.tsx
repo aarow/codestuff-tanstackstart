@@ -15,10 +15,12 @@ function HomePage() {
     <>
       <Navbar />
       <main>
-        <Hero />
-        {/* <Projects /> */}
-        <Skills />
-        <Experience />
+        <div className="[view-transition-name:main-content]">
+          <Hero />
+          {/* <Projects /> */}
+          <Skills />
+          <Experience />
+        </div>
       </main>
       <Footer />
     </>

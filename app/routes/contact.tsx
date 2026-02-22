@@ -78,10 +78,11 @@ function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-surface pt-24 pb-16 px-6">
+    <div className="min-h-screen bg-surface pt-24 pb-16 px-6 [view-transition-name:main-content]">
       <div className="max-w-xl mx-auto">
         <Link
           to="/"
+          viewTransition={{ types: ['slide-left'] }}
           className="inline-flex items-center gap-2 text-text-secondary hover:text-text-primary text-sm mb-10 transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

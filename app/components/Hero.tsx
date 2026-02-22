@@ -74,6 +74,7 @@ export default function Hero() {
           </a> */}
           <Link
             to="/contact"
+            viewTransition={{ types: ['slide-right'] }}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-brand/50 hover:text-brand-light transition-colors text-text-secondary font-medium"
           >
             Get in touch
