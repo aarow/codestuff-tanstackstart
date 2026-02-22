@@ -1,4 +1,5 @@
 import { JSX } from 'react';
+import { Link } from '@tanstack/react-router';
 import { personalInfo, socialLinks } from '~/lib/data/portfolio';
 
 const iconMap: Record<string, JSX.Element> = {
@@ -71,12 +72,12 @@ export default function Hero() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a> */}
-          <a
-            href="mailto:aaron@codestuff.dev"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-brand/50 hover:text-brand-light transition-colors text-text-secondary font-medium"
           >
             Get in touch
-          </a>
+          </Link>
         </div>
 
         {/* Social icons */}
@@ -85,7 +86,6 @@ export default function Hero() {
             <a
               key={link.icon}
               href={link.href}
-              target="_blank"
               rel="noopener noreferrer"
               aria-label={link.label}
               className="text-text-secondary hover:text-brand-light transition-colors"

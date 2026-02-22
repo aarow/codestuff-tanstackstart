@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { Link } from '@tanstack/react-router';
 import { personalInfo } from '~/lib/data/portfolio';
 
 const navLinks = [
@@ -8,6 +9,7 @@ const navLinks = [
   // { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -39,23 +41,32 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
-              >
-                {link.label}
-              </a>
+              {link.href.startsWith('/') ? (
+                <Link
+                  to={link.href}
+                  className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  href={link.href}
+                  className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
+                >
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>
 
         {/* CTA */}
-        <a
-          href="mailto:aaron@codestuff.dev"
+        <Link
+          to="/contact"
           className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark transition-colors text-white text-sm font-medium"
         >
           Hire me
-        </a>
+        </Link>
 
         {/* Mobile hamburger */}
         <button
@@ -80,22 +91,32 @@ export default function Navbar() {
           <ul className="flex flex-col gap-4 pt-2">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
-                >
-                  {link.label}
-                </a>
+                {link.href.startsWith('/') ? (
+                  <Link
+                    to={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-text-secondary hover:text-text-primary transition-colors text-sm font-medium"
+                  >
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
             <li>
-              <a
-                href="mailto:aaron@codestuff.dev"
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark transition-colors text-white text-sm font-medium"
               >
                 Hire me
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
