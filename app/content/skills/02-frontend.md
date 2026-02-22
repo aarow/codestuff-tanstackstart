@@ -1,4 +1,4 @@
 ---
 category: Frontend
-items: [React, TanStack Router / Start, Next.js, SvelteKit, Tailwind CSS, Vite]
+items: [React, TanStack Router / Start, Next.js, Tailwind CSS, Vite]
 ---

@@ -1,4 +1,4 @@
 ---
 category: Databases
-items: [PostgreSQL, MySQL, Redis, ClickHouse, SQLite]
+items: [PostgreSQL, MySQL, Mongo]
 ---

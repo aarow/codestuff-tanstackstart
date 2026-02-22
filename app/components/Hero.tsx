@@ -62,7 +62,7 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-          <a
+          {/* <a
             href="#projects"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand hover:bg-brand-dark transition-colors text-white font-medium"
           >
@@ -70,7 +70,7 @@ export default function Hero() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </a> */}
           <a
             href="mailto:aaron@codestuff.dev"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-brand/50 hover:text-brand-light transition-colors text-text-secondary font-medium"

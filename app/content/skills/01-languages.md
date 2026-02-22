@@ -1,4 +1,4 @@
 ---
 category: Languages
-items: [TypeScript, JavaScript, Python, Go, SQL]
+items: [TypeScript, JavaScript, Java, SQL]
 ---

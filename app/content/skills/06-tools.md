@@ -1,4 +1,4 @@
 ---
 category: Tools
-items: [Git, VS Code, Figma, Linear, Postman]
+items: [Git, VS Code, Figma, DBeaver, Postman]
 ---
