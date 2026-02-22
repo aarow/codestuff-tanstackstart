@@ -1,4 +1,4 @@
 ---
 category: DevOps & Cloud
-items: [Docker, GitHub Actions, AWS, Jenkins]
+items: [Docker, GitHub Actions, AWS, Azure, Jenkins]
 ---
