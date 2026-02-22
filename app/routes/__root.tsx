@@ -1,28 +1,14 @@
 /// <reference types="vite/client" />
-import * as React from 'react';
 import {
   createRootRoute,
   HeadContent,
   Outlet,
   Scripts,
-  Link,
 } from '@tanstack/react-router';
 import appCss from '~/styles/app.css?url';
-
-function NotFound() {
-  return (
-    <div className="min-h-screen bg-surface text-text-primary flex flex-col items-center justify-center gap-4">
-      <h1 className="text-6xl font-bold text-brand">404</h1>
-      <p className="text-text-secondary text-lg">Page not found.</p>
-      <Link
-        to="/"
-        className="px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark transition-colors text-white text-sm font-medium"
-      >
-        Go home
-      </Link>
-    </div>
-  );
-}
+// import Footer from '~/components/Footer';
+// import Navbar from '~/components/Navbar';
+import NotFound from './NotFound';
 
 export const Route = createRootRoute({
   notFoundComponent: NotFound,
@@ -49,7 +35,9 @@ function RootComponent() {
         <HeadContent />
       </head>
       <body className="bg-surface text-text-primary antialiased">
+        {/* <Navbar /> */}
         <Outlet />
+        {/* <Footer /> */}
         <Scripts />
       </body>
     </html>

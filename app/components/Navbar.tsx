@@ -33,7 +33,7 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="font-bold text-lg tracking-tight text-text-primary hover:text-brand-light transition-colors">
-          {personalInfo.name.split(' ')[0]}
+          Code Stuff Co
           <span className="text-brand">.</span>
         </a>
 
