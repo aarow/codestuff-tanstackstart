@@ -27,15 +27,15 @@ This is a TanStack Start React-based developer portfolio site with TypeScript an
 - Lint: `npm run lint`
 
 ## Repository Structure
-- `app/`: TanStack Router pages and layouts organized by route
-- `components/`: Reusable React components
-  - `components/ui/`: UI components (buttons, inputs, etc.)
-- `__tests__/`: Unit test components
-- `lib/`: Core logic and services
-  - `lib/data/`: Data models and mock data
-  - `lib/types/`: TypeScript type definitions
-- `public/`: Static assets
-- `tests/`: Test files and test utilities
+- `app/routes/`: TanStack Router pages and layouts organized by route
+- `app/components/`: Reusable React components
+  - `app/components/ui/`: UI components (buttons, inputs, etc.)
+- `app/__tests__/`: Unit test components
+- `app/lib/`: Core logic and services
+  - `app/lib/data/`: Data models and mock data
+  - `app/lib/types/`: TypeScript type definitions
+- `app/content`: markdown content for main page and sections
+- `app/styles`: app css files
 - `README.md`: Project documentation
 
 ## Key Guidelines

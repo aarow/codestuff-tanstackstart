@@ -12,17 +12,15 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   return (
-    <>
+    <div className="[view-transition-name:main-content]">
       <Navbar />
       <main>
-        <div className="[view-transition-name:main-content]">
           <Hero />
           {/* <Projects /> */}
           <Skills />
           <Experience />
-        </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

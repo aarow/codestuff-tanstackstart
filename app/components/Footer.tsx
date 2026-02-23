@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import { personalInfo, socialLinks } from '~/lib/data/portfolio';
 
 const iconMap: Record<string, JSX.Element> = {
