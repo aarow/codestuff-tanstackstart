@@ -76,6 +76,7 @@ export const projects: Project[] = parseFiles(projectFiles).map(
     tech: data['tech'] as string[],
     liveUrl: data['liveUrl'] as string | undefined,
     githubUrl: data['githubUrl'] as string | undefined,
+    screenshotUrl: data['screenshotUrl'] as string | undefined,
     featured: data['featured'] as boolean,
   }),
 );

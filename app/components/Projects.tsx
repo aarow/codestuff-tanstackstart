@@ -1,9 +1,19 @@
+import { useState } from 'react';
 import { projects } from '~/lib/data/portfolio';
+import Lightbox from '~/components/Lightbox';
 
 function ExternalLinkIcon() {
   return (
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+    </svg>
+  );
+}
+
+function PreviewIcon() {
+  return (
+    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.069A1 1 0 0121 8.882v6.236a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
     </svg>
   );
 }
@@ -20,15 +30,25 @@ export default function Projects() {
   const featured = projects.filter((p) => p.featured);
   const rest = projects.filter((p) => !p.featured);
 
+  const [activeScreenshot, setActiveScreenshot] = useState<{ src: string; alt: string } | null>(null);
+
   return (
-    <section id="projects" className="py-24 px-6">
+    <>
+      {activeScreenshot && (
+        <Lightbox
+          src={activeScreenshot.src}
+          alt={activeScreenshot.alt}
+          onClose={() => setActiveScreenshot(null)}
+        />
+      )}
+      <section id="projects" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="mb-14">
           <p className="text-brand text-sm font-semibold uppercase tracking-widest mb-2">Portfolio</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary">Selected Projects</h2>
           <p className="mt-3 text-text-secondary max-w-xl">
-            A selection of things I've built — from open-source tools to production SaaS products.
+            A selection of things I've built recently.
           </p>
         </div>
 
@@ -67,6 +87,18 @@ export default function Projects() {
                     Code
                   </a>
                 )}
+                {project.screenshotUrl && (
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActiveScreenshot({ src: project.screenshotUrl!, alt: project.title })
+                    }
+                    className="flex items-center gap-1.5 text-text-secondary hover:text-brand-light transition-colors text-sm"
+                  >
+                    <PreviewIcon />
+                    Preview
+                  </button>
+                )}
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
@@ -74,7 +106,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 text-text-secondary hover:text-text-primary transition-colors text-sm ml-auto"
                   >
-                    Live demo
+                    In Production
                     <ExternalLinkIcon />
                   </a>
                 )}
@@ -113,11 +145,24 @@ export default function Projects() {
                     GitHub
                   </a>
                 )}
+                {project.screenshotUrl && (
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setActiveScreenshot({ src: project.screenshotUrl!, alt: project.title })
+                    }
+                    className="flex items-center gap-1.5 text-text-secondary hover:text-brand-light transition-colors text-xs"
+                  >
+                    <PreviewIcon />
+                    Preview
+                  </button>
+                )}
               </div>
             </article>
           ))}
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
